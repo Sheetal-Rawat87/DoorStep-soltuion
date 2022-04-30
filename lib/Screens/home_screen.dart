@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onestop_solution/Screens/mainHome.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -11,12 +12,14 @@ class _HomePageState extends State<HomePage> {
 
   int _currentIndex=0;
 
-  final tabs=[
-    Center(child: Text('Home')),
-    Center(child: Text('No Booking Available')),
-    Center(child: Text('Help Center')),
-    Center(child: Text('Profile')),
+  List<Widget>tabs = <Widget>[
+    Home(),
+    Text('NO Booking Available'),
+    Text('Help Center'),
+    Text('Profile')
   ];
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,3 +63,4 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
