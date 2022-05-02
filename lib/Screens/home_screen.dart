@@ -1,5 +1,10 @@
+import 'dart:html';
+
 import 'package:flutter/material.dart';
-import 'package:onestop_solution/Screens/mainHome.dart';
+import 'package:onestop_solution/Screens/imageSlider.dart';
+import 'package:onestop_solution/Screens/product-list.dart';
+import 'package:onestop_solution/Screens/list-booking.dart';
+import 'package:onestop_solution/Screens/help_center.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -13,9 +18,10 @@ class _HomePageState extends State<HomePage> {
   int _currentIndex=0;
 
   List<Widget>tabs = <Widget>[
-    Home(),
-    Text('NO Booking Available'),
-    Text('Help Center'),
+    ImageSlider(),
+    //ProductList(),
+    ListBooking(),
+   // HelpCenter(),
     Text('Profile')
   ];
 
